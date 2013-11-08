@@ -2,9 +2,14 @@
   "name": "jswget",
   "version": "0.1.0",
   "description": "REST and resumable download client for nodejs",
+  "author": "Decky Fiyemonda",
   "main": "lib/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.13.x"
   },
   "repository": {
     "type": "git",
@@ -14,9 +19,15 @@
     "REST",
     "download",
     "client"
-  ],
-  "author": "Decky Fiyemonda",
-  "license": "BSD",
+  ],  
+  "licenses": [{
+	  "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+	}],
+  "engines": {
+	  "node":  ">=0.6"
+  },
+  "homepage": "https://github.com/1412/jswget",
   "gitHead": "73bb312684d830debfe6c94854ab88790c4044e6",
   "readmeFilename": "README.md"
 }
