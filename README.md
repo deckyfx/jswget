@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/1412/jswget.png?label=ready)](https://waffle.io/1412/jswget)  
 Usage
 =====
 ##Download File
