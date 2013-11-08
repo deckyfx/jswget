@@ -1,0 +1,2 @@
+git add . && git commit && git push
+sudo npm unpublish --force ./ && sudo npm publish ./

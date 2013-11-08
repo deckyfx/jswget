@@ -1,0 +1,22 @@
+{
+  "name": "jswget",
+  "version": "0.1.0",
+  "description": "REST and resumable download client for nodejs",
+  "main": "lib/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1412/jswget.git"
+  },
+  "keywords": [
+    "REST",
+    "download",
+    "client"
+  ],
+  "author": "Decky Fiyemonda",
+  "license": "BSD",
+  "gitHead": "73bb312684d830debfe6c94854ab88790c4044e6",
+  "readmeFilename": "README.md"
+}
