@@ -76,6 +76,7 @@ jswget({
 *   headers            #OBJECT set of request headers
 *   rawdata            #STRING send raw data with request
 *   formdata           #OBJECT JSON of pair form name and value to be sent with request
+*   query	            #OBJECT JSON of pair query argument name and value sent with request, added in path
 *   auth               #OBJECT JSON of pair username and password of base64 auth header
 *   oauth              #OBJECT JSON of oauth component contain {consumer_key, consumer_secret, access_token, token_secret, [signature_method], [oauth_token_version]}
 *   encoding           #STRING response encoding default is utf-8
