@@ -114,16 +114,12 @@ jswget({
 ## Documentation
 
 
-
 ## Tests
-
-
 
 
 ## Contribution
 
-You are welcome to contribute by writing issues or pull requests.<br>
-It would be nice if you open source your own loaders or webmodules. :)
+You are welcome to contribute by writing issues or pull requests.
 
 You are also welcome to correct any spelling mistakes or any language issues, because my english is not perfect...
 
