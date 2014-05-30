@@ -130,6 +130,6 @@ You are also welcome to correct any spelling mistakes or any language issues, be
 
 ## License
 
-Copyright (c) 2012-2013 Tobias Koppers
+Copyright (c) 2014 Decky Fx
 
 MIT (http://www.opensource.org/licenses/mit-license.php)
