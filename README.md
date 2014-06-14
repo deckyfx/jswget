@@ -80,10 +80,12 @@ jswget({
 *   auth               #OBJECT JSON of pair username and password of base64 auth header
 *   oauth              #OBJECT JSON of oauth component contain {consumer_key, consumer_secret, access_token, token_secret, [signature_method], [oauth_token_version]}
 *   encoding           #STRING response encoding default is utf-8
-*   onsend             #FUNCTION triggered when request is innitiated [request object, request_options object]
+*   onsend             #FUNCTION triggered when request is initiated [request object, request_options object]
 *   ondata             #FUNCTION triggered when request is on progress with argument [chunck, request object, response object]
 *   onsuccess          #FUNCTION triggered when request is completed with argument [response, request object, response object]
-*   onerror            #FUNCTION triggered when request is incompleted with argument [error object, request object]
+*   onerror            #FUNCTION triggered when request is incomplete with argument [error object, request object]
+*   onhead             #FUNCTION triggered when request is got head response (download mode) with argument [error object, request object]
+*   onend              #FUNCTION triggered when request is end, regardless result with argument [request object, options object]
 *   scope              #OBJECT scope of callback
 *   pipestream         #STREAM Stream to be piped response, see node.js Fs documentation
 *   cookiefile         #STRING path of cookie file
