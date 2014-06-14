@@ -67,44 +67,51 @@ jswget({
 ## Options
 
 ```
-*   url                #STRING url input with format [protocol]://[host]:[port]/[path]?[query]#[bookmark]
-*   protocol           #STRING protocol, together with hostname, port, path (as query too) as url
-*   hostname           #STRING hostname, together with protocol, port, path (as query too) as url
-*   port               #STRING port, together with protocol, hostname, path (as query too) as url
-*   path               #STRING path (as query too), together with protocol, hostname, port as url
-*   method             #STRING method default is GET
-*   headers            #OBJECT set of request headers
-*   rawdata            #STRING send raw data with request
-*   formdata           #OBJECT JSON of pair form name and value to be sent with request
-*   query              #OBJECT JSON of pair query argument name and value sent with request, added in path
-*   auth               #OBJECT JSON of pair username and password of base64 auth header
-*   oauth              #OBJECT JSON of oauth component contain {consumer_key, consumer_secret, access_token, token_secret, [signature_method], [oauth_token_version]}
-*   encoding           #STRING response encoding default is utf-8
-*   onsend             #FUNCTION triggered when request is initiated [request object, request_options object]
-*   ondata             #FUNCTION triggered when request is on progress with argument [chunck, request object, response object]
-*   onsuccess          #FUNCTION triggered when request is completed with argument [response, request object, response object]
-*   onerror            #FUNCTION triggered when request is incomplete with argument [error object, request object]
-*   onhead             #FUNCTION triggered when request is got head response (download mode) with argument [error object, request object]
-*   onend              #FUNCTION triggered when request is end, regardless result with argument [request object, options object]
-*   scope              #OBJECT scope of callback
-*   pipestream         #STREAM Stream to be piped response, see node.js Fs documentation
-*   cookiefile         #STRING path of cookie file
-*   cookies            #OBJECT of cookie { cookiename: {value, path, expires, max-age, secure, httponly, domain, port, commenturl, discard} }
-*   downloadmode       #BOOLEAN set true to enter download mode
-*   downloadas         #STRING rename downloaded file
-*   downloadpath       #STRING path of downloaded file
-*   uploadfile         #STRING file path to be uploaded, upload file work only when downlloadmode = false, and no other form is uploaded
-*   timeout            #NUMBER time out in mili second
-*   follow             #BOOLEAN follow redirection, default is true
-*   maxfollow          #NUMBER Max number of redirection before throw error, default is 10
-*   -HTTPS Option see nodejs HTTPS documentation-
-*   pfx                #STRING when the protocol is https, the https client will be constructed using this options
-*   key                #STRING when the protocol is https, the https client will be constructed using this options
-*   passphrase         #STRING when the protocol is https, the https client will be constructed using this options
-*   cert               #STRING when the protocol is https, the https client will be constructed using this options
-*   ca                 #STRING when the protocol is https, the https client will be constructed using this options
-*   ciphers            #STRING when the protocol is https, the https client will be constructed using this options
-*   rejectUnauthorized #STRING when the protocol is https, the https client will be constructed using this options
+* the configuration are:
+ *   url                #STRING url input with format [protocol]://[host]:[port]/[path]?[query]#[bookmark]
+ *   protocol           #STRING protocol, together with hostname, port, path (as query too) as url
+ *   hostname           #STRING hostname, together with protocol, port, path (as query too) as url
+ *   port               #STRING port, together with protocol, hostname, path (as query too) as url
+ *   path               #STRING path (as query too), together with protocol, hostname, port as url
+ *   method             #STRING method default is GET
+ *   headers            #OBJECT set of request headers
+ *   rawdata            #STRING send raw data with request
+ *   formdata           #OBJECT JSON of pair form name and value to be sent with request
+ *   query	            #OBJECT JSON of pair query argument name and value sent with request, added in path
+ *   auth               #OBJECT JSON of pair username and password of base64 auth header
+ *   oauth              #OBJECT JSON of oauth component contain {consumer_key, consumer_secret, access_token, token_secret, [signature_method], [oauth_token_version]}
+ *   encoding           #STRING response encoding default is utf-8
+ *   onsend             #FUNCTION triggered when request is initiated [request object, configuration object]
+ *   onresponse         #FUNCTION triggered when request is got first response [response object, request object, configutation object]
+ *   onredirect         #FUNCTION triggered when request is beng redirected with argument [request object, response object, configutation object]
+ *   ondata             #FUNCTION triggered when request is on progress with argument [chunck, request object, response object, configutation object]
+ *   onsuccess          #FUNCTION triggered when request is completed with argument [response, request object, response object, configutation object]
+ *   onerror            #FUNCTION triggered when request is incomplete with argument [error object, request object, configutation object]
+ *   onhead             #FUNCTION triggered when request is got head response (download mode) with argument [error object, request object, configutation object]
+ *   onend              #FUNCTION triggered when request is end, regardless result with argument [request object, configutation object]
+ *   onsocket           #FUNCTION triggered when request is got socket assigned with argument [request object, configutation object]
+ *   onconnect          #FUNCTION triggered when request is got response CONNECT method upgrade with argument [request object, configutation object]
+ *   onupgrade          #FUNCTION triggered when request is got response upgrade from server with argument [request object, configutation object]
+ *   oncontinue         #FUNCTION triggered when request is got "100 Continue" response from server with argument [request object, configutation object]
+ *   scope              #OBJECT scope of callback
+ *   pipestream         #STREAM Stream to be piped response, see node.js Fs documentation
+ *   cookiefile         #STRING path of cookie file
+ *   cookies            #OBJECT of cookie { configs.cookiename: {value, path, expires, max-age, secure, httponly, domain, port, commenturl, discard} }
+ *   downloadmode       #BOOLEAN set true to enter download mode
+ *   downloadas         #STRING rename downloaded file
+ *   downloadpath       #STRING path of downloaded file
+ *   uploadfile         #STRING file path to be uploaded, upload file work only when downlloadmode = false, and no other form is uploaded
+ *   timeout            #NUMBER time out in mili second
+ *   follow             #BOOLEAN follow redirection, default is true
+ *   maxfollow          #NUMBER Max number of redirection before throw error, default is 10
+ *   -HTTPS Option see nodejs HTTPS documentation-
+ *   pfx                #STRING when the protocol is https, the https client will be constructed using this configuration
+ *   key                #STRING when the protocol is https, the https client will be constructed using this configutation
+ *   passphrase         #STRING when the protocol is https, the https client will be constructed using this configutation
+ *   cert               #STRING when the protocol is https, the https client will be constructed using this configutation
+ *   ca                 #STRING when the protocol is https, the https client will be constructed using this configutation
+ *   ciphers            #STRING when the protocol is https, the https client will be constructed using this configutation
+ *   rejectUnauthorized #STRING when the protocol is https, the https client will be constructed using this configutation
 ```
 
 ## To Do
