@@ -114,6 +114,12 @@ jswget({
  *   rejectUnauthorized #STRING when the protocol is https, the https client will be constructed using this configutation
 ```
 
+## Changelist
+### Version 0.2.x
+ * Add onredirect, onsocket, onconnect, onupgrade, oncontinue listeners
+ * Make sure to create new aggent for every request
+ * Restructured whole code, to avoid repetitive
+
 ## To Do
 
 1. More testing,
