@@ -1,20 +1,24 @@
 var jswget = require("../lib/index.js");
+var fs = require("fs");
 
 jswget({
     url: "http://google.com/",
     method: "GET",	
     query: {
-    	q2: "value"
+    	safe: "active",
+		client: "psy-ab",
+		q: "jswget+github",
+		oq: "jswget+github"
     },
-    timeout: 20000,
 	onredirect: function (resp, rq, rs) {
     	console.log("Redirect: ");
     },
     onsuccess: function (resp, rq, rs) {
-    	// console.log("Success: ", resp);
+		fs.writeFileSync("./follow_redirect.html", resp);
+    	console.log("Success: File Saved");
     },
     onerror: function (e, rq, rs) {
-    	// console.log("Error: ", e);              
+    	console.log("Error: ", e);              
     },
     scope: this
  });

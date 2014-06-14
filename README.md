@@ -82,16 +82,16 @@ jswget({
  *   oauth              #OBJECT JSON of oauth component contain {consumer_key, consumer_secret, access_token, token_secret, [signature_method], [oauth_token_version]}
  *   encoding           #STRING response encoding default is utf-8
  *   onsend             #FUNCTION triggered when request is initiated [request object, configuration object]
- *   onresponse         #FUNCTION triggered when request is got first response [response object, request object, configutation object]
+ *   onresponse         #FUNCTION triggered when request is got first response [request object, response object, configutation object]
  *   onredirect         #FUNCTION triggered when request is beng redirected with argument [request object, response object, configutation object]
  *   ondata             #FUNCTION triggered when request is on progress with argument [chunck, request object, response object, configutation object]
  *   onsuccess          #FUNCTION triggered when request is completed with argument [response, request object, response object, configutation object]
  *   onerror            #FUNCTION triggered when request is incomplete with argument [error object, request object, configutation object]
- *   onhead             #FUNCTION triggered when request is got head response (download mode) with argument [error object, request object, configutation object]
+ *   onhead             #FUNCTION triggered when request is got head response (download mode) with argument [error object, request object, response object, configutation object]
  *   onend              #FUNCTION triggered when request is end, regardless result with argument [request object, configutation object]
- *   onsocket           #FUNCTION triggered when request is got socket assigned with argument [request object, configutation object]
- *   onconnect          #FUNCTION triggered when request is got response CONNECT method upgrade with argument [request object, configutation object]
- *   onupgrade          #FUNCTION triggered when request is got response upgrade from server with argument [request object, configutation object]
+ *   onsocket           #FUNCTION triggered when request is got socket assigned with argument [socket object, request object, configutation object]
+ *   onconnect          #FUNCTION triggered when request is got response CONNECT method upgrade with argument [request object, response object, socket object, head object, configutation object]
+ *   onupgrade          #FUNCTION triggered when request is got response upgrade from server with argument [request object, response object, socket object, head object, configutation object]
  *   oncontinue         #FUNCTION triggered when request is got "100 Continue" response from server with argument [request object, configutation object]
  *   scope              #OBJECT scope of callback
  *   pipestream         #STREAM Stream to be piped response, see node.js Fs documentation
