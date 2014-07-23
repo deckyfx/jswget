@@ -52,9 +52,52 @@ jswget({
 });
 ```
 
+### Upload File to Wiki
+```
+var jswget = require('jswget');
+new jswget({
+    url: "http://somewikipage.com/" + "wikia.php",
+    query: {
+        controller: "UploadPhotos",
+        method: "Upload",
+        format: "json"
+    }, 
+    formdata: {
+        wpSourceType: "file",
+        wpUploadFile: new jswget.File(*your_image*),
+        wpDestFileWarningAck: "on",
+        "wpDestFile": *image_name*,
+        wpUploadDescription: "Upload Caption",
+        wpLicense: "File License",
+        wpWatchthis: "on",
+        wpIgnoreWarning: "on",
+        wpOverWriteFile: "on"
+    },
+    cookiefile: "./cookies.txt",
+    headers: {
+        "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36",
+        "Accept-Language":"en-US,en;q=0.8,id;q=0.6",
+        "Cache-Control":"no-cache",
+        "Connection":"keep-alive",
+        "Host":"ggz.wikia.com"
+    },
+    method: "POST",
+    onsend: function(req, opt){           
+    },
+    onerror: function(err, req, opt){
+        console.log(err)
+    },
+    onsuccess: function(restext, req, resp, opt){
+        console.log(restext)
+    },
+    onend: function(req, opt){
+    }
+});
+```
+
 ## Features
 
-1. In downlaod mode, When file with same name found in download path, jswget will try to resume the download.
+1. In download mode, When file with same name found in download path, jswget will try to resume the download.
 2. Cookie support, you can get cookie vars, or store and read automaticaly from a file path
 3. Upload mode
 4. Redirect follow
@@ -62,7 +105,8 @@ jswget({
 6. Support for both HTTPS and HTTP
 7. Pipe request output stream
 8. Send POST data or raw data
-9. etc
+9. Upload file support, to upload file put value to "formdata" config with jswget.File(*file_path*)
+10. etc
 
 ## Options
 
@@ -100,7 +144,6 @@ jswget({
  *   downloadmode       #BOOLEAN set true to enter download mode
  *   downloadas         #STRING rename downloaded file
  *   downloadpath       #STRING path of downloaded file
- *   uploadfile         #STRING file path to be uploaded, upload file work only when downlloadmode = false, and no other form is uploaded
  *   timeout            #NUMBER time out in mili second
  *   follow             #BOOLEAN follow redirection, default is true
  *   maxfollow          #NUMBER Max number of redirection before throw error, default is 10
