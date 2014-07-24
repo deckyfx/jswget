@@ -1,6 +1,6 @@
 {
   "name": "jswget",
-  "version": "0.3.3",
+  "version": "0.3.3b",
   "description": "REST and resumable download client for nodejs",
   "author": {
     "name": "Decky Fiyemonda"
