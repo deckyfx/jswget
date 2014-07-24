@@ -56,12 +56,7 @@ jswget({
 ```
 var jswget = require('jswget');
 new jswget({
-    url: "http://somewikipage.com/" + "wikia.php",
-    query: {
-        controller: "UploadPhotos",
-        method: "Upload",
-        format: "json"
-    }, 
+    url: "http://somewikipage.com/" + "wikia.php" + "?controller=UploadPhotos&method=Upload&format=json",
     formdata: {
         wpSourceType: "file",
         wpUploadFile: new jswget.File(*your_image*),
