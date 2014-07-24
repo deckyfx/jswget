@@ -52,6 +52,7 @@ jswget({
 });
 ```
 
+
 ### Upload File to Wiki
 ```
 var jswget = require('jswget');
