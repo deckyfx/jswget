@@ -19,6 +19,10 @@ npm install jswget
 
 ```
 jswget(options);
+
+// or
+
+jswget(url, callback);
 ```
 
 ## Sample
