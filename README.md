@@ -1,6 +1,6 @@
 jswget
 ===========
-[![NPM](https://nodei.co/npm/jswget.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jswget/)
+[![NPM](https://nodei.co/npm/jswget.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jswget/)<br/>
 [![NPM version](https://badge.fury.io/js/jswget.png)](http://badge.fury.io/js/jswget)
 [![Stories in Ready](https://badge.waffle.io/1412/jswget.png?label=ready)](http://waffle.io/1412/jswget)
 [![build status](https://secure.travis-ci.org/1412/jswget.png)](http://travis-ci.org/1412/jswget)
