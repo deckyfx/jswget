@@ -23,6 +23,18 @@ jswget(options);
 
 ## Sample
 
+### Simple Mode
+```
+var jswget = require('jswget');
+jswget("http://www.nyaa.se/?page=search&cats=1_37&filter=0&term=", function(err, req, res, response){
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log(response);
+});
+```
+
 ### Download File
 ```
 var jswget = require('jswget');
