@@ -195,4 +195,4 @@ You are also welcome to correct any spelling mistakes or any language issues, be
 
 Copyright (c) 2014 Decky Fx
 
-MIT (http://www.opensource.org/licenses/mit-license.php)
+No license, but i will appreciate it if you put credit to your app if you did include this.
