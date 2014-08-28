@@ -130,6 +130,7 @@ new jswget({
  *   hostname           #STRING hostname, together with protocol, port, path (as query too) as url
  *   port               #STRING port, together with protocol, hostname, path (as query too) as url
  *   path               #STRING path (as query too), together with protocol, hostname, port as url
+ *   pathname           #STRING alias of config path, (warning: it have higher priority, will overwrite path)
  *   method             #STRING method default is GET
  *   headers            #OBJECT set of request headers
  *   rawdata            #STRING send raw data with request
@@ -169,6 +170,15 @@ new jswget({
  *   ciphers            #STRING when the protocol is https, the https client will be constructed using this configutation
  *   rejectUnauthorized #STRING when the protocol is https, the https client will be constructed using this configutation
 ```
+
+If using callback, the callback will called with the following function: 
+```
+function callback(err, responsebody){
+    // err may be undefined if no error
+    // responsebody may be undefined if error is occured
+}
+```
+
 
 ## Changelist
 ### Version 0.2.x
