@@ -1,5 +1,5 @@
 var jswget = require("../lib/index.js");
-
+/*
 jswget({
     url: "http://google.com/",
     method: "GET",	
@@ -18,8 +18,8 @@ jswget({
     },
     scope: this
 });
+*/
 
-/*
 var commander = {
     host: "127.0.0.1",
     port: 3000,
@@ -48,4 +48,3 @@ var option = {
 jswget(option, function(err, req, res, body) {
     console.log("Done", arguments)
 })
-*/
